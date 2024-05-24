@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Algorithme somme d'une liste</h1>
+    <div id="resultat"></div>
+    <label>Veuillez entrer les données </label>
+    <input type="text" id="data" placeholder="Par exemple 1, 8,9">
+    <button onclick="sommeListe()">Resultat</button>
+
+
+    <script>
+        function sommeListe(){
+            let somme = 0
+            let compteur = 0
+            let tab = (document.getElementById("data").value).split('')
+            //let taille = tab.split('').length
+            console.log(tab)
+            let taille = tab.length
+            while(compteur < taille){
+                somme += tab[compteur]
+                compteur++
+            }
+
+            document.getElementById('resultat').innerHTML = "La somme de la liste vaut : " + somme
+
+        }
+    </script>
+</body>
+</html>
